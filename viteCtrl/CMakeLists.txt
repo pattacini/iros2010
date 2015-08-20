@@ -1,0 +1,44 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+SET(PROJECTNAME viteCtrl)
+PROJECT(${PROJECTNAME})
+
+FIND_PACKAGE(YARP)
+FIND_PACKAGE(ICUB)
+
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${YARP_MODULE_PATH})
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ICUB_MODULE_PATH})
+INCLUDE(iCubOptions)
+INCLUDE(iCubHelpers)
+
+SET(REACHING_MODULE_SOURCES
+    src/Vector.cpp
+    src/Matrix.cpp
+    src/mathlib.cpp
+    src/TreeParser.cpp
+    src/KinematicChain.cpp
+    src/Rotation.cpp
+    src/Translation.cpp
+    src/RigidTransfo.cpp
+    src/KChainBodySchema.cpp
+    src/KChainOrientationBodySchema.cpp 
+    src/ReachingGen.cpp
+    src/KinematicTree.cpp
+    src/SpecializedPort.cpp
+    src/ReachingModuleThread.cpp
+)
+
+SET(CMAKE_CXX_FLAGS "-O3")
+SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${ICUB_LINK_FLAGS}")
+
+ADD_DEFINITIONS(-DBODY_SCHEMA -DTRUE=1 -DFALSE=0 -DGOAL_DIRECTED_MAIN -DYARP_ROBOT -DNEW_SERVER_PROCESS) 
+IF(MSVC)
+   ADD_DEFINITIONS(-DMSVC) 
+ENDIF(MSVC)
+
+INCLUDE_DIRECTORIES(${ICUB_INCLUDE_DIRS} ${YARP_INCLUDE_DIRS} include/)
+ADD_EXECUTABLE(${PROJECTNAME} ${REACHING_MODULE_SOURCES})  
+TARGET_LINK_LIBRARIES(${PROJECTNAME} ctrlLib ${YARP_LIBRARIES})
+INSTALL(TARGETS ${PROJECTNAME} DESTINATION ./)
+
+

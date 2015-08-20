@@ -1,0 +1,62 @@
+<Segment> r_sfe
+<Axis> 0.96593 0 -0.25882 </Axis>
+<Angle> 0 </Angle>
+<Range> -95.5 10 </Range>
+<Position> 0 0 0 </Position>
+<Children>
+<Segment> r_saa
+<Axis> -0.25882 0 -0.96593 </Axis>
+<Angle> 0  </Angle>
+<Range> 0 161 </Range>
+<Position> -104.069 0 27.885 </Position>
+<Children>
+<Segment> r_shr
+<Axis> 0 1 0 </Axis>
+<Angle> 0 </Angle>
+<Range> -37 80 </Range>
+<Position> 0 0 0 </Position>      
+<Children> 
+<Segment> r_eb
+<Axis> -1 0 0 </Axis>
+<Angle> 0  </Angle>
+<Range> 15 106 </Range>
+<Position> 0 -152.28 0 </Position>      
+<Children>
+<Segment> r_fr
+<Axis> 0 1 0 </Axis>
+<Angle> 0  </Angle>
+<Range> -90 90 </Range>
+<Position> 0 0 -15 </Position> 
+<Children>
+<Segment> r_wrist1
+<Axis> 0 0 1 </Axis>
+<Angle> 0  </Angle>
+<Range> -90 0 </Range>
+<Position> 0 -137.3 0 </Position> 
+<Children>
+<Segment> r_wrist2
+<Axis> 1 0 0 </Axis>
+<Angle> 0  </Angle>
+<Range> -20 40 </Range>
+<Position> 0 0 0 </Position> 
+<Children>
+<Segment> r_hand
+<Angle> 0  </Angle>
+<Range> 0 0 </Range>
+<Position> 16 -62.5 0 </Position> 
+</Segment>
+</Children> 
+</Segment>
+</Children> 
+</Segment>
+</Children>
+</Segment>
+</Children> 
+</Segment>
+</Children> 
+</Segment>
+</Children> 
+</Segment>
+</Children>
+</Segment>
+
