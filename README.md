@@ -8,7 +8,7 @@ In summary, the list of the tested controllers is:
 It implements the minimum-jerk Cartesian controller as contribution to the community given by the authors. It is provided directly with the iCub software, hence it is not embedded with the zip, and requires the [iKin library](http://wiki.icub.org/iCub/main/dox/html/group__iKin.html) for the forward/inverse kinematics computation as well as the IpOpt package for the nonlinear optimization.
 
 ###### Important Note
-Currently, `iKinArmCtrl` has been declared **superseded** since a new highly configurable Cartesian interface came out after this work. However, the code of the now obsolete controller is still available under this repository path: iCub/contrib/src/superseded/iKinArmCtrl.
+Currently, `iKinArmCtrl` has been declared **superseded** since a new highly configurable Cartesian interface came out after this work. However, the code of the now obsolete controller is still available under this [repository path](https://sourceforge.net/p/robotcub/code/HEAD/tree/trunk/iCub/contrib/src/superseded/iKinArmCtrl).
 
 #### viteCtrl
 It is a verbatim copy of the Hersch's module with the small addition of code snippets that allow accepting inputs according to the standard convention of the [iCub kinematics](http://wiki.icub.org/wiki/ICubForwardKinematics).
